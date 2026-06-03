@@ -938,13 +938,26 @@ document.getElementById("home").style.display="block";
 
 }
 
-function saveReply(id){
+async function saveReply(id){
 
 let text = document.getElementById(id).value;
 
+if(text.trim() === ""){
+alert("Anything you want to write ❤️");
+return;
+}
+
 localStorage.setItem(id,text);
 
-alert("❤️ Your reply has been saved ❤️");
+await fetch("https://script.google.com/macros/s/AKfycbymwh8ayvkH_LitmMP3HfT3BIJkk3XmbyjaWEPx08VwgM2Lkhae3OjAkDnmZDKYH3r8rw/exec",{
+method:"POST",
+body:JSON.stringify({
+page:id,
+reply:text
+})
+});
+
+alert("❤️ Reply Saved ❤️");
 
 }
 
