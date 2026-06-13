@@ -6,6 +6,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Our Journey ❤️</title>
 
+
+
+
 <style>
 
 .page img{
@@ -27,6 +30,9 @@ font-family:'Poppins',sans-serif;
 }
 
 body{
+
+
+
 background:linear-gradient(135deg,#ff758c,#ff7eb3,#a18cd1);
 min-height:100vh;
 display:flex;
@@ -35,6 +41,9 @@ align-items:flex-start;
 overflow-y:auto;
 padding:20px;
 }
+
+
+
 
 /* Floating Hearts */
 .heart{
@@ -156,13 +165,218 @@ font-size:18px;
 font-weight:bold;
 }
 
+
+
+#loginPage{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+display:flex;
+justify-content:center;
+align-items:center;
+background:url("34.jpeg");
+background-size:cover;
+background-position:center;
+z-index:99999;
+}
+
+
+
+
+#loginPage::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:url("34.jpeg");
+
+background-size:cover;
+
+background-position:center;
+
+filter:blur(8px);
+
+z-index:-1;
+
+}
+
+
+
+
+.loginBox{
+width:90%;
+max-width:400px;
+padding:35px;
+background:rgba(255,255,255,.2);
+backdrop-filter:blur(20px);
+border-radius:25px;
+text-align:center;
+color:white;
+}
+
+.loginBox input{
+width:90%;
+padding:12px;
+margin:10px;
+border:none;
+border-radius:20px;
+}
+
+.loginBox button{
+padding:12px 30px;
+border:none;
+border-radius:20px;
+cursor:pointer;
+}
+
+
+
+.hearts{
+position:absolute;
+width:100%;
+height:100%;
+overflow:hidden;
+top:0;
+left:0;
+pointer-events:none;
+}
+
+.hearts span{
+position:absolute;
+font-size:30px;
+bottom:-50px;
+animation:floatHearts 8s linear infinite;
+}
+
+.hearts span:nth-child(1){left:10%;animation-delay:0s;}
+.hearts span:nth-child(2){left:20%;animation-delay:0s;}
+.hearts span:nth-child(3){left:30%;animation-delay:2s;}
+.hearts span:nth-child(4){left:50%;animation-delay:4s;}
+.hearts span:nth-child(5){left:70%;animation-delay:1s;}
+.hearts span:nth-child(6){left:90%;animation-delay:3s;}
+.hearts span:nth-child(7){left:80%;animation-delay:2s;}
+
+@keyframes floatHearts{
+0%{
+transform:translateY(0) scale(0.5);
+opacity:0;
+}
+20%{
+opacity:1;
+}
+100%{
+transform:translateY(-100vh) scale(1.5);
+opacity:0;
+}
+}
+
+
+
+
+
+body::before{
+
+content:"";
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:url("35.jpeg");
+background-size:cover;
+background-position:center;
+filter:blur(8px);
+z-index:-2;
+
+}
+
+body::after{
+
+content:"";
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.3);
+z-index:-1;
+
+}
+
+
+
+
+
 </style>
 </head>
 <body>
 
+
+
+
+<div id="loginPage">
+
+
+<div class="hearts">
+  <span>❤️</span>
+   <span>🌸</span>
+  <span>💖</span>
+  <span>💕</span>
+  <span>💗</span>
+  <span>💓</span>
+   <span>🌸</span>
+</div>
+
+
+<div class="loginBox">
+
+<h1>❤️</h1>
+
+<h2>Welcome Jii👑</h2>
+
+<!-- <p>Our Secret Journey</p> -->
+
+<input type="text"
+id="username"
+placeholder="Username">
+
+<input type="password"
+id="password"
+placeholder="Password">
+
+<button onclick="login()">
+
+💕 Enter 
+
+</button>
+
+</div>
+
+</div>
+
+
+
+
+
+
 <audio id="bgMusic" loop>
     <source src="Ve Haaniyaan - Official Video  Ravi Dubey & Sargun Mehta  Danny  Avvy Sra  Dreamiyata Music - Dreamiyata Music Official.mp3" type="audio/mpeg">
 </audio>
+
+
+
+
+
+
 
 <!-- Floating Hearts -->
 <div class="heart" style="left:10%;">❤️</div>
@@ -171,9 +385,12 @@ font-weight:bold;
 <div class="heart" style="left:60%;animation-delay:1s;">❤️</div>
 <div class="heart" style="left:80%;animation-delay:3s;">💘</div>
 
+
+
+
 <!-- HOME PAGE -->
 
-<div class="container" id="home">
+<div class="container" id="home" style="display:none;">
 
 <h1>👑 Hello My Madam Jii 👑</h1>
 
@@ -259,16 +476,23 @@ Again we faces meany ups and downs 😐
 </button>
 
 
+
 <button onclick="openPage('page11')">
+🙇‍♂️Our Punishments🫡
+</button>
+
+
+
+<button onclick="openPage('page12')">
 Special Baateinn🫰
 </button>
 
-<button onclick="openPage('page12')">
+<button onclick="openPage('page13')">
 👀Myyy speciall gallery...📷
 </button>
 
 
-<button onclick="openPage('page13')">
+<button onclick="openPage('page14')">
 💌 Kuchhh linessss.... 💌
 </button>
 
@@ -277,13 +501,16 @@ Special Baateinn🫰
 
 </div>
 
+
+
+
 <!-- PAGE 1 -->
 
 <div class="container page" id="page1">
 <h2>📩 First Time Message and Date</h2>
 
 <p>
-mujhko tumpr ❤️crush thaa mujhko msg krna chahiye tha pr  phle tumne hii mujhko msg kr diya 😁 instagram pr 30 April 2023 ko ... tumne meri story pr reply kr diya orr scchi me itna khush hua thaa bss tumhare story reply se kyaaa hiii btau 🤗😁😅😅
+mujhko tumpr ❤️crush thaa mujhko msg krna chahiye tha pr  phle tumne hii mujhko msg kr diya 😁 instagram pr 30 April 2024 ko ... tumne meri story pr reply kr diya orr scchi me itna khush hua thaa bss tumhare story reply se kyaaa hiii btau 🤗😁😅😅
 
 <br>
 <h3>💌 Your Reply</h3>
@@ -309,6 +536,8 @@ Send Reply ❤️
 <button class="back" onclick="goHome()">⬅ Back</button>
 </div>
 
+
+
 <!-- PAGE 2 -->
 
 <div class="container page" id="page2">
@@ -319,7 +548,7 @@ tumne first time msg to kra thaa pr mene socha propose kr deta hu😂
 kya ptaa itne saal ki baat bn hiii jaye sbse phle mene bghwan jii ki mrji li mene 
 raat ko hii prchi rkh dii thi jisme do option the haa or naa ke subha mene dekha to usme 
 haa wale option pr tick thaa 🤗me sch me bhot khush hua thaa 😊ki bghwan jii bhi chahte
- hai ki hum baaat kre to mene tumko propose kr diya "8 February 2024" ko prr 
+ hai ki hum baaat kre to mene tumko propose kr diya "8 February 2025" ko prr 
  aapne mnaa krdi 😅pr me to jiddi hu 😀😀....
 </p>
 
@@ -327,7 +556,7 @@ haa wale option pr tick thaa 🤗me sch me bhot khush hua thaa 😊ki bghwan jii
 <h3>💌 Your Reply</h3>
 
 <textarea id="reply2"
-placeholder="Anything youu want to write❤️"
+placeholder="Anything youu want to write❤️" 
 style="width:90%;height:120px;padding:10px;border-radius:15px;border:none;margin-top:15px;resize:none;font-size:14px;">
 </textarea>
 
@@ -354,7 +583,7 @@ Send Reply ❤️
 
 <p>
 phle aapne bola tha ki family me se kisi se confirm krlo ki hmari shadi aage possible h ya nhi mene didi ko bhi bta diya usne bhi kuch nhi bola pr phir aap nhi maani phir 
-aapne mnaa to kr diya pr me jiddi tha mene socha me mnaa hii lunga prr... kaafi try kiya mene aaap nhi maani to hmari baaatein bhi bnd ho gyi thi 3-4 mahino ke liye phir August comeback hua hmara jb me Premanand maharaj jii❤️ ke drshn krke aaya tha mene unki story lgayi thi tb hi raat ko aapka uss story pr reply aaya thaa "27 August 2024" ko .... phir uske baad se ab tkk continue hai😁😁
+aapne mnaa to kr diya pr me jiddi tha mene socha me mnaa hii lunga prr... kaafi try kiya mene aaap nhi maani to hmari baaatein bhi bnd ho gyi thi 3-4 mahino ke liye phir August comeback hua hmara jb me Premanand maharaj jii❤️ ke drshn krke aaya tha mene unki story lgayi thi tb hi raat ko aapka uss story pr reply aaya thaa "27 August 2025" ko .... phir uske baad se ab tkk continue hai😁😁
 </p>
 
 
@@ -420,7 +649,7 @@ Send Reply ❤️
 <h2>🎁 First Meet & First Gift</h2>
 
 <p>
-phli baar to hum "29 October"🤞 ko mile the  phla gift to tumne mujhe phle hii de diya jb tumne instagram pr reply kraa tha 😀❤️🤞vhi mere liye sbse bdaaa gift thaaa orr me tumhare liye tumhari mnpsnd cheez laya tha jo mene tumhari insta se hii dekha tha kinder joy me jhumke rkh kr 😁😁 mene usme ek prchi bhi rkhi thi jo aapne faad kr phek dii pr uska reply bhi tumne bhot time baad kraa prr baad me kraa uske liye bhii bhot bhot bhot thankkkkk uuuuuuuuuu❤️🥰🤗
+phli baar to hum "29 October 2025"🤞 ko mile the  phla gift to tumne mujhe phle hii de diya jb tumne instagram pr reply kraa tha 😀❤️🤞vhi mere liye sbse bdaaa gift thaaa orr me tumhare liye tumhari mnpsnd cheez laya tha jo mene tumhari insta se hii dekha tha kinder joy me jhumke rkh kr 😁😁 mene usme ek prchi bhi rkhi thi jo aapne faad kr phek dii pr uska reply bhi tumne bhot time baad kraa prr baad me kraa uske liye bhii bhot bhot bhot thankkkkk uuuuuuuuuu❤️🥰🤗
 </p>
 
 <img src="WhatsApp Image 2026-06-01 at 10.15.24 AM.jpeg">
@@ -448,6 +677,8 @@ Send Reply ❤️
 <br><br>
 <button class="back" onclick="goHome()">⬅ Back</button>
 </div>
+
+
 
 
 
@@ -503,7 +734,7 @@ Send Reply ❤️
 <h2>☕ First Time In Café</h2>
 
 <p>
-tumhare birthday ke baad hum phli baar caffe me mile the "10 December" ye date yaad rhegi kyuki ek to hum phle baar caffe me mil the orr dusri sbse bhynkar or sbse phli ldayi hmari vhi hui thi jisme mene tumse iss prchi wala reply puchh liya pura mood spoil kr diy mene sorrryyyyyyyyyyy butttt bhot time ho chuka tha iss liye reply maanga thaa bsss 🤣🤣pr sbse bhynkr ldayi hui hmari 2-3 ldayi chli thi hmari 😀😀
+tumhare birthday ke baad hum phli baar caffe me mile the "10 December 2025" ye date yaad rhegi kyuki ek to hum phle baar caffe me mil the orr dusri sbse bhynkar or sbse phli ldayi hmari vhi hui thi jisme mene tumse iss prchi wala reply puchh liya pura mood spoil kr diy mene sorrryyyyyyyyyyy butttt bhot time ho chuka tha iss liye reply maanga thaa bsss 🤣🤣pr sbse bhynkr ldayi hui hmari 2-3 din ldayi chli thi hmari 😀😀
 </p>
 
 <img src="WhatsApp Image 2026-05-18 at 3.34.22 PM (1).jpeg">
@@ -530,6 +761,9 @@ Send Reply ❤️
 <br><br>
 <button class="back" onclick="goHome()">⬅ Back</button>
 </div>
+
+
+
 
 <!-- PAGE 8 -->
 
@@ -567,6 +801,8 @@ Send Reply ❤️
 </div>
 
 
+
+
 <!-- PAGE 9 -->
 
 <div class="container page" id="page9">
@@ -597,6 +833,10 @@ Send Reply ❤️
 <br><br>
 <button class="back" onclick="goHome()">⬅ Back</button>
 </div>
+
+
+
+
 
 <!-- PAGE 10 -->
 
@@ -632,52 +872,15 @@ Send Reply ❤️
 </div>
 
 
+
+
 <!-- PAGE 11-->
 
 <div class="container page" id="page11">
-<h2>Kuchh  unkhi baatein🫰🔒</h2>
+<h2>Punishments  🙇‍♂️</h2>
 <p>
-Lucky to ho tum mere liye ☺️🤞 tum aayi ho jbse pta nhi sari responsibility khud hii smjhne lg gya hu phle aisa nhi tha bilkul tumhare aane se ye bhot bda change aa gya h  ...
-Phle Pooja path bhi km krta tha 😄krta tha pr itni nhi pr ab pta nhi kese krne lg gya devi to nhi ho tum 😄🙇orr phle itna mandir vgera nhi jaa pata thaa ab to khud bghwan jiii yaad krke bula lete h 😃 unhe lgta h tumhe hii maangne aayega to bula leta hu 🤞😁😁 isiliye mujhe bula lete h ..
-Phle gussa bhot jyada aata thaa ldayi vgera bhi ho jati thi prr aapne ldayi to bnd krwa di 😃thankkk uuu issee mere ghr wale bhot khush h 😁 pr gussa aa jata h tum hii jhelti ho mere gusse ko 😌 sorrrrrrrrrrrrrrrrry gussa thnda ho jata h uske baad regret hota h pr pta nhi kyu ye km hii nhi ho rha sorrrrrrrrrrrrrrrrry hrr baat pr gussa kr deta hu 🙇🙇.....
-Meri aapse ekk hii request hai jyada tension Mt liya orrr thoda khud pr believe rkho kbhi apne future ki kbhi apne ghr ki kbhi bahar walo ki sb tension tum hii le leti ho happpyyyy happppy rhaaa kro bsss ☺️☺️☺️hmesha chehre se nhi andr se bhiii khush rha kro 🤞💐...............
-Baaaakii kuchh tension huaa kre to btaya kro mujhee orrr hmari relationship ki tension ho to me aaage me sambhal lunga no tension 🤞🫶💓
-
+Jbb koi relationship me hota h to kisi se bhi koi bhi glti ho skti h 🙂 hum dono me se koi itna perfect nhi h ki koi glti hii naa kre .... Pr ye tumhara bhot accha idea tha ki koi bhi glti kre to usko punish kr skte h taaki vo glti dubara repeat naa ho 🫡 kyuki glti hoti h to gussa to aataa h pr baat bnd kr dena ye accha option nhi h ☺️🤞
 </p>
-
-<br>
-<h3>💌 Your Reply</h3>
-
-<textarea id="reply11"
-placeholder="Anything youu want to write❤️"
-style="width:90%;height:120px;padding:10px;border-radius:15px;border:none;margin-top:15px;resize:none;font-size:14px;">
-</textarea>
-
-<br><br>
-<button onclick="sendReply('reply11')">
-Send Reply ❤️
-</button>
-<br><br>
-
-<button onclick="saveReply('reply11')">
-💾 Save Memory ❤️
-</button>
-
-<br><br>
-<button class="back" onclick="goHome()">⬅ Back</button>
-</div>
-
-
-
-
-<!-- PAGE 12-->
-
-<div class="container page" id="page12">
-<h2>👀My favourtieeeeee...😍</h2>
-<p>
-
-</p>
- 
 <video controls
 onclick="this.play()"
 style="
@@ -741,6 +944,130 @@ border-radius:20px;
 margin-top:20px;
 cursor:pointer;
 ">
+  <source src="38.mp4" type="video/mp4">
+</video>
+
+
+
+
+<video controls
+onclick="this.play()"
+style="
+width:50%;
+max-width:300px;
+border-radius:20px;
+margin-top:20px;
+cursor:pointer;
+">
+  <source src="39.mp4" type="video/mp4">
+</video>
+
+
+
+<video controls
+onclick="this.play()"
+style="
+width:50%;
+max-width:300px;
+border-radius:20px;
+margin-top:20px;
+cursor:pointer;
+">
+  <source src="40.mp4" type="video/mp4">
+</video>
+
+
+
+
+<br>
+<h3>💌 Your Reply</h3>
+
+<textarea id="reply11"
+placeholder="Anything youu want to write❤️"
+style="width:90%;height:120px;padding:10px;border-radius:15px;border:none;margin-top:15px;resize:none;font-size:14px;">
+</textarea>
+
+<br><br>
+<button onclick="sendReply('reply11')">
+Send Reply ❤️
+</button>
+<br><br>
+
+<button onclick="saveReply('reply11')">
+💾 Save Memory ❤️
+</button>
+
+<br><br>
+<button class="back" onclick="goHome()">⬅ Back</button>
+</div>
+
+
+
+
+
+
+
+
+<!-- PAGE 12-->
+
+<div class="container page" id="page12">
+<h2>Kuchh  unkhi baatein🫰🔒</h2>
+<p>
+Lucky to ho tum mere liye ☺️🤞 tum aayi ho jbse pta nhi sari responsibility khud hii smjhne lg gya hu phle aisa nhi tha bilkul tumhare aane se ye bhot bda change aa gya h  ...
+Phle Pooja path bhi km krta tha 😄krta tha pr itni nhi pr ab pta nhi kese krne lg gya devi to nhi ho tum 😄🙇orr phle itna mandir vgera nhi jaa pata thaa ab to khud bghwan jiii yaad krke bula lete h 😃 unhe lgta h tumhe hii maangne aayega to bula leta hu 🤞😁😁 isiliye mujhe bula lete h ..
+Phle gussa bhot jyada aata thaa ldayi vgera bhi ho jati thi prr aapne ldayi to bnd krwa di 😃thankkk uuu issee mere ghr wale bhot khush h 😁 pr gussa aa jata h tum hii jhelti ho mere gusse ko 😌 sorrrrrrrrrrrrrrrrry gussa thnda ho jata h uske baad regret hota h pr pta nhi kyu ye km hii nhi ho rha sorrrrrrrrrrrrrrrrry hrr baat pr gussa kr deta hu 🙇🙇.....
+Meri aapse ekk hii request hai jyada tension Mt liya orrr thoda khud pr believe rkho kbhi apne future ki kbhi apne ghr ki kbhi bahar walo ki sb tension tum hii le leti ho happpyyyy happppy rhaaa kro bsss ☺️☺️☺️hmesha chehre se nhi andr se bhiii khush rha kro 🤞💐...............
+Baaaakii kuchh tension huaa kre to btaya kro mujhee orrr hmari relationship ki tension ho to me aaage me sambhal lunga no tension 🤞🫶💓
+
+</p>
+
+<br>
+<h3>💌 Your Reply</h3>
+
+<textarea id="reply12"
+placeholder="Anything youu want to write❤️"
+style="width:90%;height:120px;padding:10px;border-radius:15px;border:none;margin-top:15px;resize:none;font-size:14px;">
+</textarea>
+
+<br><br>
+<button onclick="sendReply('reply12')">
+Send Reply ❤️
+</button>
+<br><br>
+
+<button onclick="saveReply('reply12')">
+💾 Save Memory ❤️
+</button>
+
+<br><br>
+<button class="back" onclick="goHome()">⬅ Back</button>
+</div>
+
+
+
+
+<!-- PAGE 13-->
+
+<div class="container page" id="page13">
+<h2>👀My favourtieeeeee...😍</h2>
+<p>
+
+</p>
+ 
+
+
+
+
+
+<video controls
+onclick="this.play()"
+style="
+width:50%;
+max-width:300px;
+border-radius:20px;
+margin-top:20px;
+cursor:pointer;
+">
   <source src="WhatsApp Video 2026-05-18 at 3.35.50 PM (1).mp4" type="video/mp4">
 </video>
 
@@ -770,6 +1097,50 @@ cursor:pointer;
   <source src="15.mp4" type="video/mp4">
 </video>
 
+
+<video controls
+onclick="this.play()"
+style="
+width:50%;
+max-width:300px;
+border-radius:20px;
+margin-top:20px;
+cursor:pointer;
+">
+  <source src="41.mp4" type="video/mp4">
+</video>
+
+
+
+
+<video controls
+onclick="this.play()"
+style="
+width:50%;
+max-width:300px;
+border-radius:20px;
+margin-top:20px;
+cursor:pointer;
+">
+  <source src="42.mp4" type="video/mp4">
+</video>
+
+
+
+<video controls
+onclick="this.play()"
+style="
+width:50%;
+max-width:300px;
+border-radius:20px;
+margin-top:20px;
+cursor:pointer;
+">
+  <source src="43.mp4" type="video/mp4">
+</video>
+
+
+
 <img src="16.jpeg">
 <img src="WhatsApp Image 2026-05-18 at 3.34.22 PM (1).jpeg">
 <img src="WhatsApp Image 2026-06-01 at 1.00.40 PM.jpeg">
@@ -791,23 +1162,28 @@ cursor:pointer;
 <img src="31.jpeg">
 <img src="32.jpeg">
 <img src="33.jpeg">
+<img src="36.jpeg">
+<img src="37.jpeg">
+<img src="44.jpg">
+<img src="45.jpg">
+
 
 
 <br><br>
 <h3>💌 Your Reply</h3>
 
-<textarea id="reply12"
+<textarea id="reply13"
 placeholder="Anything youu want to write❤️"
 style="width:90%;height:120px;padding:10px;border-radius:15px;border:none;margin-top:15px;resize:none;font-size:14px;">
 </textarea>
 
 <br><br>
-<button onclick="sendReply('reply12')">
+<button onclick="sendReply('reply13')">
 Send Reply ❤️
 </button>
 <br><br>
 
-<button onclick="saveReply('reply12')">
+<button onclick="saveReply('reply13')">
 💾 Save Memory ❤️
 </button>
 
@@ -817,9 +1193,9 @@ Send Reply ❤️
 
 
 
-<!-- PAGE 13-->
+<!-- PAGE 14-->
 
-<div class="container page" id="page13">
+<div class="container page" id="page14">
 
 <h2>💌 Kuchhh linessss.... 💌</h2>
 
@@ -850,18 +1226,18 @@ Aapka apna Mayank... 😅😅
 <br>
 <h3>💌 Your Reply</h3>
 
-<textarea id="reply13"
+<textarea id="reply14"
 placeholder="Write something for me ❤️"
 style="width:90%;height:120px;padding:10px;border-radius:15px;border:none;margin-top:15px;resize:none;font-size:14px;">
 </textarea>
 
 <br><br>
-<button onclick="sendReply('reply13')">
+<button onclick="sendReply('reply14')">
 Send Reply ❤️
 </button>
 <br><br>
 
-<button onclick="saveReply('reply13')">
+<button onclick="saveReply('reply14')">
 💾 Save Memory ❤️
 </button>
 
@@ -870,14 +1246,10 @@ Send Reply ❤️
 <button class="back" onclick="goHome()">⬅ Back</button>
 
 </div>
-
-
 </button>
 
 
 <script>
-
-
 
 const images = document.querySelectorAll("img");
 
@@ -907,9 +1279,6 @@ function startMusic(){
 document.getElementById("bgMusic").play();
 
 }
-
-
-
 
 
 function openPage(id){
@@ -982,6 +1351,7 @@ encodeURIComponent(text),
 
 window.onload = function(){
 
+
 let textareas = document.querySelectorAll("textarea");
 
 textareas.forEach(area=>{
@@ -996,11 +1366,32 @@ area.value = saved;
 
 }
 
+
+
+function login(){
+
+let user=document.getElementById("username").value;
+
+let pass=document.getElementById("password").value;
+
+if(user=="Riyank" && pass=="Riyank#0514#"){
+
+document.getElementById("loginPage").style.display="none";
+document.getElementById("home").style.display="block";
+
+}else{
+
+alert("Wrong Username or Password ❤️");
+
+}
+
+}
+
+
+
+
+
 </script>
-   
-
-
-
 <script>
 
 const bgMusic = document.getElementById("bgMusic");
@@ -1048,12 +1439,6 @@ border-radius:15px;
 ">
 
 </div>
-
-
-
-
-
-
 </body>
 </html>
 
